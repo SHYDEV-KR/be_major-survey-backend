@@ -102,4 +102,5 @@ def generate_new_page_in_db(db_id, submitted_form):
     json_data = json.loads(response.text)
     return json_data
   else:
-    return f"{response.status_code} Error"
+    print(response)
+    return f"{response.status_code}"
