@@ -97,10 +97,10 @@ def generate_new_page_in_db(db_id, submitted_form):
     } 
   }
 
+  
   response = requests.post(request_url, json=body_data, headers=headers)
   if response.status_code == 200:
     json_data = json.loads(response.text)
     return json_data
   else:
-    print(response)
     return f"{response.status_code}"
